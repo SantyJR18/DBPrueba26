@@ -28,3 +28,15 @@ CREATE TABLE Persona (
 	estado BIT DEFAULT 'true'
 );
 go
+
+--DML
+
+-- Create/Insertar un registro
+
+Insert into Ciudad(nombre) values (N'Masaya')
+Insert into Ciudad(nombre) values (N'Managua'), (N'Granada'), (N'Jinotepe'), (N'Leon')
+
+--Mostrar registro
+
+SELECT * FROM Ciudad
+go
