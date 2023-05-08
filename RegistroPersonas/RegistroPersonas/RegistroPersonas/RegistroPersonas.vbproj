@@ -82,6 +82,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dao\DCiudades.vb" />
+    <Compile Include="dao\MConex.vb" />
     <Compile Include="entidades\Tbl_Ciudad.vb" />
     <Compile Include="entidades\Tbl_Persona.vb" />
     <Compile Include="formularios\FrmCiudad.Designer.vb">

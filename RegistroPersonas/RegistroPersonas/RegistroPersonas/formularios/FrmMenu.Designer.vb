@@ -24,10 +24,10 @@ Partial Class FrmMenu
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HolaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FormulariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CiudadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PersonaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HolaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -39,7 +39,8 @@ Partial Class FrmMenu
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivoToolStripMenuItem, Me.FormulariosToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(776, 28)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(582, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -47,52 +48,54 @@ Partial Class FrmMenu
         '
         Me.ArchivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HolaToolStripMenuItem})
         Me.ArchivoToolStripMenuItem.Name = "ArchivoToolStripMenuItem"
-        Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(73, 24)
+        Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
         Me.ArchivoToolStripMenuItem.Text = "Archivo"
+        '
+        'HolaToolStripMenuItem
+        '
+        Me.HolaToolStripMenuItem.Name = "HolaToolStripMenuItem"
+        Me.HolaToolStripMenuItem.Size = New System.Drawing.Size(99, 22)
+        Me.HolaToolStripMenuItem.Text = "Hola"
         '
         'FormulariosToolStripMenuItem
         '
         Me.FormulariosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CiudadToolStripMenuItem, Me.PersonaToolStripMenuItem})
         Me.FormulariosToolStripMenuItem.Name = "FormulariosToolStripMenuItem"
-        Me.FormulariosToolStripMenuItem.Size = New System.Drawing.Size(101, 24)
+        Me.FormulariosToolStripMenuItem.Size = New System.Drawing.Size(82, 20)
         Me.FormulariosToolStripMenuItem.Text = "Formularios"
         '
         'CiudadToolStripMenuItem
         '
         Me.CiudadToolStripMenuItem.Name = "CiudadToolStripMenuItem"
-        Me.CiudadToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.CiudadToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.CiudadToolStripMenuItem.Text = "Ciudad"
         '
         'PersonaToolStripMenuItem
         '
         Me.PersonaToolStripMenuItem.Name = "PersonaToolStripMenuItem"
-        Me.PersonaToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.PersonaToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.PersonaToolStripMenuItem.Text = "Persona"
-        '
-        'HolaToolStripMenuItem
-        '
-        Me.HolaToolStripMenuItem.Name = "HolaToolStripMenuItem"
-        Me.HolaToolStripMenuItem.Size = New System.Drawing.Size(124, 26)
-        Me.HolaToolStripMenuItem.Text = "Hola"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.RegistroPersonas.My.Resources.Resources.grupo
-        Me.PictureBox1.Location = New System.Drawing.Point(146, 57)
+        Me.PictureBox1.Location = New System.Drawing.Point(110, 46)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(462, 343)
+        Me.PictureBox1.Size = New System.Drawing.Size(346, 279)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
         'FrmMenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(776, 435)
+        Me.ClientSize = New System.Drawing.Size(582, 353)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "FrmMenu"
         Me.Text = "Registro Personas"
         Me.MenuStrip1.ResumeLayout(False)
