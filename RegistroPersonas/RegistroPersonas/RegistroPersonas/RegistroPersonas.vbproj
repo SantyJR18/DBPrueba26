@@ -83,7 +83,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dao\DCiudades.vb" />
-    <Compile Include="dao\MConex.vb" />
+    <Compile Include="DsDBPrueba.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsDBPrueba.xsd</DependentUpon>
+    </Compile>
     <Compile Include="entidades\Tbl_Ciudad.vb" />
     <Compile Include="entidades\Tbl_Persona.vb" />
     <Compile Include="formularios\FrmCiudad.Designer.vb">
@@ -121,30 +125,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="resources\Ciudad.vb">
-      <DependentUpon>ModelBDPrueba26.tt</DependentUpon>
-    </Compile>
-    <Compile Include="resources\ModelBDPrueba26.Context.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelBDPrueba26.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="resources\ModelBDPrueba26.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelBDPrueba26.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="resources\ModelBDPrueba26.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelBDPrueba26.tt</DependentUpon>
-    </Compile>
-    <Compile Include="resources\Persona.vb">
-      <DependentUpon>ModelBDPrueba26.tt</DependentUpon>
-    </Compile>
-    <Compile Include="resources\sysdiagram.vb">
-      <DependentUpon>ModelBDPrueba26.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="formularios\FrmCiudad.resx">
@@ -164,6 +144,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="DsDBPrueba.xsc">
+      <DependentUpon>DsDBPrueba.xsd</DependentUpon>
+    </None>
+    <None Include="DsDBPrueba.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsDBPrueba.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DsDBPrueba.xss">
+      <DependentUpon>DsDBPrueba.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -174,14 +165,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <EntityDeploy Include="resources\ModelBDPrueba26.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelBDPrueba26.Designer.vb</LastGenOutput>
-    </EntityDeploy>
     <None Include="packages.config" />
-    <None Include="resources\ModelBDPrueba26.edmx.diagram">
-      <DependentUpon>ModelBDPrueba26.edmx</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -190,16 +174,6 @@
     <Content Include="resources\iconos\editar.png" />
     <Content Include="resources\iconos\grupo.png" />
     <Content Include="resources\iconos\guardar.png" />
-    <Content Include="resources\ModelBDPrueba26.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ModelBDPrueba26.Context.vb</LastGenOutput>
-      <DependentUpon>ModelBDPrueba26.edmx</DependentUpon>
-    </Content>
-    <Content Include="resources\ModelBDPrueba26.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelBDPrueba26.edmx</DependentUpon>
-      <LastGenOutput>ModelBDPrueba26.vb</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

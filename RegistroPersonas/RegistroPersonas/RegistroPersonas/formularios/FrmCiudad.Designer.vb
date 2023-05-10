@@ -23,16 +23,16 @@ Partial Class FrmCiudad
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
+        Me.BtnGuardar = New System.Windows.Forms.ToolStripButton()
+        Me.BtnNuevo = New System.Windows.Forms.ToolStripButton()
+        Me.BtnEditar = New System.Windows.Forms.ToolStripButton()
+        Me.BtnBorrar = New System.Windows.Forms.ToolStripButton()
         Me.GbRegistros = New System.Windows.Forms.GroupBox()
         Me.DgvRegistrosC = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.CbActivo = New System.Windows.Forms.CheckBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.txtID = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ToolStrip1.SuspendLayout()
@@ -44,48 +44,48 @@ Partial Class FrmCiudad
         'ToolStrip1
         '
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripButton4})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGuardar, Me.BtnNuevo, Me.BtnEditar, Me.BtnBorrar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(402, 27)
         Me.ToolStrip1.TabIndex = 0
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ToolStripButton1
+        'BtnGuardar
         '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = Global.RegistroPersonas.My.Resources.Resources.guardar
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(24, 24)
-        Me.ToolStripButton1.Text = "Guardar"
+        Me.BtnGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BtnGuardar.Image = Global.RegistroPersonas.My.Resources.Resources.guardar
+        Me.BtnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(24, 24)
+        Me.BtnGuardar.Text = "Guardar"
         '
-        'ToolStripButton2
+        'BtnNuevo
         '
-        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton2.Image = Global.RegistroPersonas.My.Resources.Resources.agregar_archivo
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(24, 24)
-        Me.ToolStripButton2.Text = "Agregar/Nuevo"
+        Me.BtnNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BtnNuevo.Image = Global.RegistroPersonas.My.Resources.Resources.agregar_archivo
+        Me.BtnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnNuevo.Name = "BtnNuevo"
+        Me.BtnNuevo.Size = New System.Drawing.Size(24, 24)
+        Me.BtnNuevo.Text = "Agregar/Nuevo"
         '
-        'ToolStripButton3
+        'BtnEditar
         '
-        Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton3.Image = Global.RegistroPersonas.My.Resources.Resources.editar
-        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(24, 24)
-        Me.ToolStripButton3.Text = "Editar"
+        Me.BtnEditar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BtnEditar.Image = Global.RegistroPersonas.My.Resources.Resources.editar
+        Me.BtnEditar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnEditar.Name = "BtnEditar"
+        Me.BtnEditar.Size = New System.Drawing.Size(24, 24)
+        Me.BtnEditar.Text = "Editar"
         '
-        'ToolStripButton4
+        'BtnBorrar
         '
-        Me.ToolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton4.Image = Global.RegistroPersonas.My.Resources.Resources.borrar
-        Me.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton4.Name = "ToolStripButton4"
-        Me.ToolStripButton4.Size = New System.Drawing.Size(24, 24)
-        Me.ToolStripButton4.Text = "Borrar"
+        Me.BtnBorrar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BtnBorrar.Image = Global.RegistroPersonas.My.Resources.Resources.borrar
+        Me.BtnBorrar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnBorrar.Name = "BtnBorrar"
+        Me.BtnBorrar.Size = New System.Drawing.Size(24, 24)
+        Me.BtnBorrar.Text = "Borrar"
         '
         'GbRegistros
         '
@@ -114,9 +114,9 @@ Partial Class FrmCiudad
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.CheckBox1)
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.CbActivo)
+        Me.GroupBox2.Controls.Add(Me.txtNombre)
+        Me.GroupBox2.Controls.Add(Me.txtID)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -129,34 +129,34 @@ Partial Class FrmCiudad
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Ciudad"
         '
-        'CheckBox1
+        'CbActivo
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(205, 34)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(62, 17)
-        Me.CheckBox1.TabIndex = 4
-        Me.CheckBox1.Text = "Activo"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.CbActivo.AutoSize = True
+        Me.CbActivo.Location = New System.Drawing.Point(205, 34)
+        Me.CbActivo.Margin = New System.Windows.Forms.Padding(2)
+        Me.CbActivo.Name = "CbActivo"
+        Me.CbActivo.Size = New System.Drawing.Size(62, 17)
+        Me.CbActivo.TabIndex = 4
+        Me.CbActivo.Text = "Activo"
+        Me.CbActivo.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'txtNombre
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(61, 72)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(160, 19)
-        Me.TextBox2.TabIndex = 3
+        Me.txtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombre.Location = New System.Drawing.Point(61, 72)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(160, 19)
+        Me.txtNombre.TabIndex = 3
         '
-        'TextBox1
+        'txtID
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(61, 35)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 19)
-        Me.TextBox1.TabIndex = 2
+        Me.txtID.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtID.Location = New System.Drawing.Point(61, 35)
+        Me.txtID.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtID.Name = "txtID"
+        Me.txtID.Size = New System.Drawing.Size(100, 19)
+        Me.txtID.TabIndex = 2
         '
         'Label2
         '
@@ -203,16 +203,16 @@ Partial Class FrmCiudad
     End Sub
 
     Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents ToolStripButton1 As ToolStripButton
-    Friend WithEvents ToolStripButton2 As ToolStripButton
-    Friend WithEvents ToolStripButton3 As ToolStripButton
-    Friend WithEvents ToolStripButton4 As ToolStripButton
+    Friend WithEvents BtnGuardar As ToolStripButton
+    Friend WithEvents BtnNuevo As ToolStripButton
+    Friend WithEvents BtnEditar As ToolStripButton
+    Friend WithEvents BtnBorrar As ToolStripButton
     Friend WithEvents GbRegistros As GroupBox
     Friend WithEvents DgvRegistrosC As DataGridView
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents CbActivo As CheckBox
+    Friend WithEvents txtNombre As TextBox
+    Friend WithEvents txtID As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
 End Class
