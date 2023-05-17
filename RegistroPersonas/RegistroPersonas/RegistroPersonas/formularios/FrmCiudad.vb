@@ -79,4 +79,13 @@
         End If
         LlenarRegistros()
     End Sub
+
+    Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
+        Dim ds As New DataSet
+        Dim dao As New DCiudades
+        ds = dao.BuscarXNombre(TxtValor.Text.Trim)
+        DgvRegistrosC.DataSource = ds.Tables(0)
+        DgvRegistrosC.Refresh()
+        GbRegistros.Text = "Registros almacenados" & DgvRegistrosC.Rows.Count
+    End Sub
 End Class

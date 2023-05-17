@@ -35,6 +35,8 @@ Partial Class FrmCiudad
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.TxtValor = New System.Windows.Forms.TextBox()
+        Me.BtnBuscar = New System.Windows.Forms.Button()
         Me.ToolStrip1.SuspendLayout()
         Me.GbRegistros.SuspendLayout()
         CType(Me.DgvRegistrosC, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -91,7 +93,7 @@ Partial Class FrmCiudad
         '
         Me.GbRegistros.Controls.Add(Me.DgvRegistrosC)
         Me.GbRegistros.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GbRegistros.Location = New System.Drawing.Point(11, 191)
+        Me.GbRegistros.Location = New System.Drawing.Point(11, 222)
         Me.GbRegistros.Margin = New System.Windows.Forms.Padding(2)
         Me.GbRegistros.Name = "GbRegistros"
         Me.GbRegistros.Padding = New System.Windows.Forms.Padding(2)
@@ -180,11 +182,29 @@ Partial Class FrmCiudad
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ID:"
         '
+        'TxtValor
+        '
+        Me.TxtValor.Location = New System.Drawing.Point(13, 192)
+        Me.TxtValor.Name = "TxtValor"
+        Me.TxtValor.Size = New System.Drawing.Size(308, 20)
+        Me.TxtValor.TabIndex = 3
+        '
+        'BtnBuscar
+        '
+        Me.BtnBuscar.Location = New System.Drawing.Point(328, 190)
+        Me.BtnBuscar.Name = "BtnBuscar"
+        Me.BtnBuscar.Size = New System.Drawing.Size(58, 23)
+        Me.BtnBuscar.TabIndex = 4
+        Me.BtnBuscar.Text = "Buscar"
+        Me.BtnBuscar.UseVisualStyleBackColor = True
+        '
         'FrmCiudad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(402, 349)
+        Me.ClientSize = New System.Drawing.Size(402, 376)
+        Me.Controls.Add(Me.BtnBuscar)
+        Me.Controls.Add(Me.TxtValor)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GbRegistros)
         Me.Controls.Add(Me.ToolStrip1)
@@ -215,4 +235,6 @@ Partial Class FrmCiudad
     Friend WithEvents txtID As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents TxtValor As TextBox
+    Friend WithEvents BtnBuscar As Button
 End Class
