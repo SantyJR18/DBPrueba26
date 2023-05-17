@@ -48,4 +48,35 @@
         txtID.Text = DgvRegistrosC.Rows(fila).Cells(0).Value
         txtNombre.Text = DgvRegistrosC.Rows(fila).Cells(1).Value
     End Sub
+
+    Private Sub BtnBorrar_Click(sender As Object, e As EventArgs) Handles BtnBorrar.Click
+        Dim codigo As Integer = txtID.Text
+        Dim dCiudad As New DCiudades()
+        Dim ciudad As New Tbl_Ciudad
+        ciudad = dCiudad.BuscarRegistro(codigo)
+        If (ciudad.IdCiudad = 0) Then
+            MsgBox("El registro no existe",
+                   MsgBoxStyle.Exclamation, "ADVERTENCIA")
+            Exit Sub
+        End If
+
+        Dim resp As VariantType
+        resp = (MsgBox("Desea eliminar este registro " & ciudad.IdCiudad, MsgBoxStyle.Question +
+                       MsgBoxStyle.YesNo, "ADVERTENCIA"))
+        If (resp = vbNo) Then
+            MsgBox("Operacion cancelada",
+                       MsgBoxStyle.Information, "Ciudades")
+            Exit Sub
+        End If
+
+        Dim eliminado = dCiudad.EliminarRegistro(ciudad.IdCiudad)
+        If (eliminado) Then
+            MsgBox("Registro eliminado exitosamente",
+                       MsgBoxStyle.Information, "Ciudades")
+        Else
+            MsgBox("No se pudo eliminar el registro",
+                   MsgBoxStyle.Critical, "ERROR")
+        End If
+        LlenarRegistros()
+    End Sub
 End Class

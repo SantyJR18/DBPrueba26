@@ -60,4 +60,43 @@ Public Class DCiudades
         Return flag
     End Function
 
+    Public Function EliminarRegistro(ByVal id As Integer) As Boolean
+        Dim resp As Boolean = False
+        Try
+            Dim tsql As String = "delete from Ciudad where id = @id"
+            Dim conn As New SqlConnection(strConexion)
+            conn.Open()
+            Dim cmd As New SqlCommand(tsql, conn)
+            cmd.CommandType = CommandType.Text
+            cmd.Parameters.AddWithValue("@id", id)
+            If (cmd.ExecuteNonQuery <> 0) Then
+                resp = True
+            End If
+            conn.Close()
+        Catch ex As Exception
+            resp = False
+        End Try
+        Return resp
+    End Function
+
+    Public Function BuscarRegistro(ByVal id As Integer) As Tbl_Ciudad
+        Dim ciudad As New Tbl_Ciudad
+        Try
+            Dim tsql As String = "select * from Ciudad where id = @id"
+            Dim conn As New SqlConnection(strConexion)
+            Dim tbl As New DataTable
+            Dim da As New SqlDataAdapter(tsql, conn)
+            da.SelectCommand.Parameters.AddWithValue("@id", id)
+            da.Fill(tbl)
+            If tbl.Rows.Count > 0 Then
+                ciudad.IdCiudad = tbl.Rows(0).Item("id")
+                ciudad.NombreCiudad = tbl.Rows(0).Item("nombre")
+                ciudad.Estado = tbl.Rows(0).Item("estado")
+            End If
+        Catch ex As Exception
+
+        End Try
+        Return ciudad
+    End Function
+
 End Class
