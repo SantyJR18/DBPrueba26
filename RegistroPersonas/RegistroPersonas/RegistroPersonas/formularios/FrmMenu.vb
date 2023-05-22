@@ -6,6 +6,8 @@
     End Sub
 
     Private Sub PersonaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PersonaToolStripMenuItem.Click
-        FrmPersona.Show()
+        Dim frm As New FrmPersona
+        frm.MdiParent = Me
+        frm.Show()
     End Sub
 End Class

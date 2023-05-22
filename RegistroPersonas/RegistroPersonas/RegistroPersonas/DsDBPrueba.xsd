@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="StrConnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="StrConnection (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.RegistroPersonas.My.MySettings.GlobalReference.Default.StrConnection" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="StrConnection" IsAppSettingsProperty="true" Modifier="Assembly" Name="StrConnection (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.RegistroPersonas.My.MySettings.GlobalReference.Default.StrConnection" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CiudadTableAdapter" GeneratorDataComponentClassName="CiudadTableAdapter" Name="Ciudad" UserDataComponentName="CiudadTableAdapter">
@@ -182,7 +182,7 @@ SELECT id, primerNombre, segundoNombre, primerApellido, segundoApellido, fechaNa
   <xs:element name="DsDBPrueba" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DsDBPrueba" msprop:Generator_UserDSName="DsDBPrueba">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Ciudad" msprop:Generator_TableClassName="CiudadDataTable" msprop:Generator_TableVarName="tableCiudad" msprop:Generator_TablePropName="Ciudad" msprop:Generator_RowDeletingName="CiudadRowDeleting" msprop:Generator_RowChangingName="CiudadRowChanging" msprop:Generator_RowEvHandlerName="CiudadRowChangeEventHandler" msprop:Generator_RowDeletedName="CiudadRowDeleted" msprop:Generator_UserTableName="Ciudad" msprop:Generator_RowChangedName="CiudadRowChanged" msprop:Generator_RowEvArgName="CiudadRowChangeEvent" msprop:Generator_RowClassName="CiudadRow">
+        <xs:element name="Ciudad" msprop:Generator_TableClassName="CiudadDataTable" msprop:Generator_TableVarName="tableCiudad" msprop:Generator_RowChangedName="CiudadRowChanged" msprop:Generator_TablePropName="Ciudad" msprop:Generator_RowDeletingName="CiudadRowDeleting" msprop:Generator_RowChangingName="CiudadRowChanging" msprop:Generator_RowEvHandlerName="CiudadRowChangeEventHandler" msprop:Generator_RowDeletedName="CiudadRowDeleted" msprop:Generator_RowClassName="CiudadRow" msprop:Generator_UserTableName="Ciudad" msprop:Generator_RowEvArgName="CiudadRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -197,7 +197,7 @@ SELECT id, primerNombre, segundoNombre, primerApellido, segundoApellido, fechaNa
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Persona" msprop:Generator_TableClassName="PersonaDataTable" msprop:Generator_TableVarName="tablePersona" msprop:Generator_TablePropName="Persona" msprop:Generator_RowDeletingName="PersonaRowDeleting" msprop:Generator_RowChangingName="PersonaRowChanging" msprop:Generator_RowEvHandlerName="PersonaRowChangeEventHandler" msprop:Generator_RowDeletedName="PersonaRowDeleted" msprop:Generator_UserTableName="Persona" msprop:Generator_RowChangedName="PersonaRowChanged" msprop:Generator_RowEvArgName="PersonaRowChangeEvent" msprop:Generator_RowClassName="PersonaRow">
+        <xs:element name="Persona" msprop:Generator_TableClassName="PersonaDataTable" msprop:Generator_TableVarName="tablePersona" msprop:Generator_RowChangedName="PersonaRowChanged" msprop:Generator_TablePropName="Persona" msprop:Generator_RowDeletingName="PersonaRowDeleting" msprop:Generator_RowChangingName="PersonaRowChanging" msprop:Generator_RowEvHandlerName="PersonaRowChangeEventHandler" msprop:Generator_RowDeletedName="PersonaRowDeleted" msprop:Generator_RowClassName="PersonaRow" msprop:Generator_UserTableName="Persona" msprop:Generator_RowEvArgName="PersonaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -257,6 +257,15 @@ SELECT id, primerNombre, segundoNombre, primerApellido, segundoApellido, fechaNa
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="ListadoPersona" msprop:Generator_TableClassName="ListadoPersonaDataTable" msprop:Generator_TableVarName="tableListadoPersona" msprop:Generator_TablePropName="ListadoPersona" msprop:Generator_RowDeletingName="ListadoPersonaRowDeleting" msprop:Generator_RowChangingName="ListadoPersonaRowChanging" msprop:Generator_RowEvHandlerName="ListadoPersonaRowChangeEventHandler" msprop:Generator_RowDeletedName="ListadoPersonaRowDeleted" msprop:Generator_UserTableName="ListadoPersona" msprop:Generator_RowChangedName="ListadoPersonaRowChanged" msprop:Generator_RowEvArgName="ListadoPersonaRowChangeEvent" msprop:Generator_RowClassName="ListadoPersonaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombrePersona" msprop:Generator_ColumnVarNameInTable="columnnombrePersona" msprop:Generator_ColumnPropNameInRow="nombrePersona" msprop:Generator_ColumnPropNameInTable="nombrePersonaColumn" msprop:Generator_UserColumnName="nombrePersona" type="xs:string" minOccurs="0" />
+              <xs:element name="Ciudad" msprop:Generator_ColumnVarNameInTable="columnCiudad" msprop:Generator_ColumnPropNameInRow="Ciudad" msprop:Generator_ColumnPropNameInTable="CiudadColumn" msprop:Generator_UserColumnName="Ciudad" type="xs:string" minOccurs="0" />
+              <xs:element name="Edad" msprop:Generator_ColumnVarNameInTable="columnEdad" msprop:Generator_ColumnPropNameInRow="Edad" msprop:Generator_ColumnPropNameInTable="EdadColumn" msprop:Generator_UserColumnName="Edad" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -270,7 +279,7 @@ SELECT id, primerNombre, segundoNombre, primerApellido, segundoApellido, fechaNa
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Persona_Ciudad" msdata:parent="Ciudad" msdata:child="Persona" msdata:parentkey="id" msdata:childkey="idCiudad" msprop:Generator_UserChildTable="Persona" msprop:Generator_ChildPropName="GetPersonaRows" msprop:Generator_UserRelationName="FK_Persona_Ciudad" msprop:Generator_ParentPropName="CiudadRow" msprop:Generator_RelationVarName="relationFK_Persona_Ciudad" msprop:Generator_UserParentTable="Ciudad" />
+      <msdata:Relationship name="FK_Persona_Ciudad" msdata:parent="Ciudad" msdata:child="Persona" msdata:parentkey="id" msdata:childkey="idCiudad" msprop:Generator_UserChildTable="Persona" msprop:Generator_ChildPropName="GetPersonaRows" msprop:Generator_UserRelationName="FK_Persona_Ciudad" msprop:Generator_RelationVarName="relationFK_Persona_Ciudad" msprop:Generator_UserParentTable="Ciudad" msprop:Generator_ParentPropName="CiudadRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
