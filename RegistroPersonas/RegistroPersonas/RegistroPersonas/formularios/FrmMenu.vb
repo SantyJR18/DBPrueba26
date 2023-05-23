@@ -34,7 +34,7 @@ Public Class FrmMenu
             Dim da As New SqlDataAdapter(tsql, conex)
             Dim t As New DataTable
             da.Fill(t)
-            verReporte(t, "dsRegistros", "reportes\RptPersonas.rdlc")
+            verReporte(t, "DataSet1", "reportes\RptPersonas.rdlc")
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al mostrar el reporte \")
         End Try
