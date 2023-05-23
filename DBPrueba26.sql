@@ -73,3 +73,5 @@ FROM     Persona
 
 SELECT primerNombre+N' '+primerApellido as N'Nombre Completo', year(getdate())-year(fechaNac) as Edad, idCiudad
 FROM     Persona
+
+SELECT Persona.primerNombre + N' ' + Persona.segundoNombre + N' ' + Persona.primerApellido + N' ' + Persona.segundoApellido as N'nombrePersona', Ciudad.nombre N'Ciudad', year(getdate()) -  year(Persona.fechaNac) as N'Edad' FROM Persona INNER JOIN Ciudad ON Ciudad.id = Persona.idCiudad
